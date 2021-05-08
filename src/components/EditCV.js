@@ -3,6 +3,17 @@ import WorkExp from "./WorkExp";
 class EditCV extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      workExpArray: [{}],
+    };
+  }
+  addNewWorkExp(event) {
+    event.preventDefault();
+    this.setState((prevState) => {
+      return {
+        workExpArray: [...prevState.workExpArray, {}],
+      };
+    });
   }
   render() {
     return (
@@ -28,7 +39,15 @@ class EditCV extends Component {
           spellCheck="false"
         ></textarea>
         <p className="section-heading-title">Work Experience</p>
-        <WorkExp />
+        <div id="work-exp-list">
+          {this.state.workExpArray.map((item, i) => {
+            return <WorkExp key={i} />;
+          })}
+        </div>
+
+        <button onClick={this.addNewWorkExp.bind(this)}>
+          + new work experience
+        </button>
       </div>
     );
   }
