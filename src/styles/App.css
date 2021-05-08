@@ -39,9 +39,10 @@
   background-color: #eeeeee;
   padding-left: 1rem;
   padding-top: 2rem;
+  padding: 2rem 1rem 2rem 1rem;
   height: auto;
 
-  border: 2px dashed black;
+  box-shadow: 3px 3px 3px rgb(150, 150, 150);
   margin: 1rem;
   display: grid;
   grid-template-rows: auto;
@@ -95,6 +96,7 @@ input {
 .edit-cv-container textarea {
   padding-left: 0.5rem;
   resize: none;
+  border: 2px solid black;
 
   height: 7rem;
   width: 55rem;
@@ -102,14 +104,33 @@ input {
   font-family: "Montserrat";
   font-size: 1.2rem;
 }
+.work-exp-container * {
+  margin: 0.5rem 0rem;
+}
 
 .work-exp-container .work-duration {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
 }
+.work-exp-container .work-duration button {
+  background-color: red;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  border: 3px solid black;
+}
+.work-exp-container .work-duration label {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
 .work-exp-container input[type="date"] {
+  margin: 0rem 3rem;
   height: 2.5rem;
   width: fit-content;
+  border: 3px solid rgb(114, 114, 114);
+  background-color: rgb(218, 218, 218);
 }
