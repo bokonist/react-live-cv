@@ -15,7 +15,7 @@ class Education extends Component {
   }
   render() {
     if (this.state.deleted === true) {
-      return <div></div>;
+      return null;
     }
     return (
       <div className="education-container">

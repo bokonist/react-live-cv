@@ -13,9 +13,10 @@ class WorkExp extends Component {
       deleted: true,
     });
   }
+
   render() {
     if (this.state.deleted === true) {
-      return <div></div>;
+      return null;
     }
     return (
       <div className="work-exp-container">

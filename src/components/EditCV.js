@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import WorkExp from "./WorkExp";
 import Education from "./Education";
+import "../styles/Edit.css";
 class EditCV extends Component {
   constructor(props) {
     super(props);
