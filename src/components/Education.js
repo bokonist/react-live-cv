@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class WorkExp extends Component {
+class Education extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,9 +18,9 @@ class WorkExp extends Component {
       return <div></div>;
     }
     return (
-      <div className="work-exp-container">
-        <input type="text" placeholder="Job Title" />
-        <input type="text" placeholder="Company" />
+      <div className="education-container">
+        <input type="text" placeholder="Degree" />
+        <input type="text" placeholder="University/School Name" />
         <input type="text" placeholder="City/Location" />
         <div className="duration">
           <label>Start Date:</label>
@@ -41,4 +41,4 @@ class WorkExp extends Component {
     );
   }
 }
-export default WorkExp;
+export default Education;

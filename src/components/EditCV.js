@@ -1,17 +1,27 @@
 import React, { Component } from "react";
 import WorkExp from "./WorkExp";
+import Education from "./Education";
 class EditCV extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      workExpArray: [{}],
+      workExpArray: [{ name: "name" }],
+      educationArray: [{}],
     };
   }
   addNewWorkExp(event) {
     event.preventDefault();
     this.setState((prevState) => {
       return {
-        workExpArray: [...prevState.workExpArray, {}],
+        workExpArray: [{}, ...prevState.workExpArray],
+      };
+    });
+  }
+  addNewEducation(event) {
+    event.preventDefault();
+    this.setState((prevState) => {
+      return {
+        educationArray: [{}, ...prevState.educationArray],
       };
     });
   }
@@ -26,7 +36,7 @@ class EditCV extends Component {
 
         <input type="text" placeholder="First Name" />
         <input type="text" placeholder="Last Name" />
-        <input type="text" placeholder="Job Title" />
+        <input type="text" placeholder="Current Job Title" />
         <input
           type="tel"
           placeholder="Phone #"
@@ -35,19 +45,31 @@ class EditCV extends Component {
         <textarea
           rows="5"
           cols="33"
-          placeholder="Description/Statement"
+          placeholder="Personal Statement"
           spellCheck="false"
         ></textarea>
-        <p className="section-heading-title">Work Experience</p>
+        <div className="section-heading">
+          <p className="section-heading-title">Work Experience</p>
+          <div className="button-container">
+            <button onClick={this.addNewWorkExp.bind(this)}>+ new </button>
+          </div>
+        </div>
         <div id="work-exp-list">
           {this.state.workExpArray.map((item, i) => {
             return <WorkExp key={i} />;
           })}
         </div>
-
-        <button onClick={this.addNewWorkExp.bind(this)}>
-          + new work experience
-        </button>
+        <div className="section-heading">
+          <p className="section-heading-title">Education</p>
+          <div className="button-container">
+            <button onClick={this.addNewEducation.bind(this)}>+ new </button>
+          </div>
+        </div>
+        <div id="education-list">
+          {this.state.educationArray.map((item, i) => {
+            return <Education key={i} />;
+          })}
+        </div>
       </div>
     );
   }
