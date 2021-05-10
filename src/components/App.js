@@ -28,8 +28,6 @@ class App extends Component {
     });
   };
   deleteWorkExpEntry(index) {
-    console.log("delete works for workexp!", index);
-
     this.setState((prevState) => {
       let workExpClone = [...prevState.workExpArray];
       workExpClone.splice(index, 1);
@@ -37,7 +35,6 @@ class App extends Component {
     });
   }
   deleteEducationEntry(index) {
-    console.log("delete works for education!", index);
     this.setState((prevState) => {
       let educationClone = [...prevState.educationArray];
       educationClone.splice(index, 1);
