@@ -27,6 +27,23 @@ class App extends Component {
       };
     });
   };
+  deleteWorkExpEntry(index) {
+    console.log("delete works for workexp!", index);
+
+    this.setState((prevState) => {
+      let workExpClone = [...prevState.workExpArray];
+      workExpClone.splice(index, 1);
+      return { workExpArray: workExpClone };
+    });
+  }
+  deleteEducationEntry(index) {
+    console.log("delete works for education!", index);
+    this.setState((prevState) => {
+      let educationClone = [...prevState.educationArray];
+      educationClone.splice(index, 1);
+      return { educationArray: educationClone };
+    });
+  }
   render() {
     return (
       <div className="App">
@@ -37,6 +54,12 @@ class App extends Component {
             educationArray={this.state.educationArray}
             addNewEducation={this.addNewEducation}
             addNewWorkExp={this.addNewWorkExp}
+            deleteWorkExpEntry={(index) => {
+              this.deleteWorkExpEntry(index);
+            }}
+            deleteEducationEntry={(index) => {
+              this.deleteEducationEntry(index);
+            }}
           />
           <Preview
             workExpArray={this.state.workExpArray}
@@ -47,5 +70,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import WorkExp from "./WorkExp";
 import Education from "./Education";
 import "../styles/Edit.css";
@@ -32,8 +32,15 @@ function EditCV(props) {
         </div>
       </div>
       <div id="work-exp-list">
-        {props.workExpArray.map((item, i) => {
-          return <WorkExp key={i} />;
+        {props.workExpArray.map((item, index) => {
+          return (
+            <WorkExp
+              key={index}
+              deleteEntry={() => {
+                props.deleteWorkExpEntry(index);
+              }}
+            />
+          );
         })}
       </div>
       <div className="section-heading">
@@ -43,8 +50,15 @@ function EditCV(props) {
         </div>
       </div>
       <div id="education-list">
-        {props.educationArray.map((item, i) => {
-          return <Education key={i} />;
+        {props.educationArray.map((item, index) => {
+          return (
+            <Education
+              key={index}
+              deleteEntry={() => {
+                props.deleteEducationEntry(index);
+              }}
+            />
+          );
         })}
       </div>
     </div>
