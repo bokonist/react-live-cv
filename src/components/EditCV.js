@@ -39,6 +39,9 @@ function EditCV(props) {
               deleteEntry={() => {
                 props.deleteWorkExpEntry(index);
               }}
+              modifyItem={(field, newValue) => {
+                props.modifyWorkExpEntry(index, field, newValue);
+              }}
             />
           );
         })}
@@ -56,6 +59,9 @@ function EditCV(props) {
               key={index}
               deleteEntry={() => {
                 props.deleteEducationEntry(index);
+              }}
+              modifyItem={(field, newValue) => {
+                props.modifyEducationEntry(index, field, newValue);
               }}
             />
           );

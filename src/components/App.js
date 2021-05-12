@@ -15,7 +15,7 @@ class App extends Component {
     event.preventDefault();
     this.setState((prevState) => {
       return {
-        workExpArray: [{}, ...prevState.workExpArray],
+        workExpArray: [...prevState.workExpArray, {}],
       };
     });
   };
@@ -28,16 +28,33 @@ class App extends Component {
     });
   };
   deleteWorkExpEntry(index) {
+    console.log("deleting at", index);
     this.setState((prevState) => {
       let workExpClone = [...prevState.workExpArray];
       workExpClone.splice(index, 1);
       return { workExpArray: workExpClone };
     });
   }
+
   deleteEducationEntry(index) {
     this.setState((prevState) => {
       let educationClone = [...prevState.educationArray];
       educationClone.splice(index, 1);
+      return { educationArray: educationClone };
+    });
+  }
+  modifyWorkExpEntry(index, field, val) {
+    this.setState((prevState) => {
+      let workExpClone = [...prevState.workExpArray];
+      workExpClone[index][field] = val;
+      return { workExpArray: workExpClone };
+    });
+  }
+  modifyEducationEntry(index, field, val) {
+    this.setState((prevState) => {
+      let educationClone = [...prevState.educationArray];
+      educationClone[index][field] = val;
+      console.log(educationClone);
       return { educationArray: educationClone };
     });
   }
@@ -56,6 +73,12 @@ class App extends Component {
             }}
             deleteEducationEntry={(index) => {
               this.deleteEducationEntry(index);
+            }}
+            modifyWorkExpEntry={(index, field, newVal) => {
+              this.modifyWorkExpEntry(index, field, newVal);
+            }}
+            modifyEducationEntry={(index, field, newVal) => {
+              this.modifyEducationEntry(index, field, newVal);
             }}
           />
           <Preview
