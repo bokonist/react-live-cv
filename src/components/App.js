@@ -23,12 +23,11 @@ class App extends Component {
     event.preventDefault();
     this.setState((prevState) => {
       return {
-        educationArray: [{}, ...prevState.educationArray],
+        educationArray: [...prevState.educationArray, {}],
       };
     });
   };
   deleteWorkExpEntry(index) {
-    console.log("deleting at", index);
     this.setState((prevState) => {
       let workExpClone = [...prevState.workExpArray];
       workExpClone.splice(index, 1);
@@ -54,7 +53,6 @@ class App extends Component {
     this.setState((prevState) => {
       let educationClone = [...prevState.educationArray];
       educationClone[index][field] = val;
-      console.log(educationClone);
       return { educationArray: educationClone };
     });
   }

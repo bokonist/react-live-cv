@@ -35,7 +35,9 @@ function EditCV(props) {
         {props.workExpArray.map((item, index) => {
           return (
             <WorkExp
+              data={item}
               key={index}
+              index={index}
               deleteEntry={() => {
                 props.deleteWorkExpEntry(index);
               }}
@@ -56,7 +58,9 @@ function EditCV(props) {
         {props.educationArray.map((item, index) => {
           return (
             <Education
+              data={item}
               key={index}
+              index={index}
               deleteEntry={() => {
                 props.deleteEducationEntry(index);
               }}
