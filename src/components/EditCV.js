@@ -3,6 +3,7 @@ import WorkExp from "./WorkExp";
 import Education from "./Education";
 import "../styles/Edit.css";
 function EditCV(props) {
+  let { firstName, lastName, jobTitle, phone, statement } = props.personalInfo;
   return (
     <div className="edit-cv-container">
       <div className="section-heading">
@@ -11,18 +12,47 @@ function EditCV(props) {
         <input id="upload-photo" type="file" name="Photo" />
       </div>
 
-      <input type="text" placeholder="First Name" />
-      <input type="text" placeholder="Last Name" />
-      <input type="text" placeholder="Current Job Title" />
+      <input
+        type="text"
+        placeholder="First Name"
+        value={firstName || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("firstName", event.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        value={lastName || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("lastName", event.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="Current Job Title"
+        value={jobTitle || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("jobTitle", event.target.value);
+        }}
+      />
       <input
         type="tel"
         placeholder="Phone #"
+        value={phone || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("phone", event.target.value);
+        }}
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
       />
       <textarea
         rows="5"
         cols="33"
         placeholder="Personal Statement"
+        value={statement || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("statement", event.target.value);
+        }}
         spellCheck="false"
       ></textarea>
       <div className="section-heading">

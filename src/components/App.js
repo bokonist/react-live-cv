@@ -7,6 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      personalInfo: {},
       workExpArray: [{}],
       educationArray: [{}],
     };
@@ -56,7 +57,15 @@ class App extends Component {
       return { educationArray: educationClone };
     });
   }
+  modifyPersonalInfo(field, val) {
+    this.setState((prevState) => {
+      let personalClone = prevState.personalInfo;
+      personalClone[field] = val;
+      return { personalInfo: personalClone };
+    });
+  }
   render() {
+    console.log(this.state.personalInfo);
     return (
       <div className="App">
         <div className="main-title-container"></div>
@@ -64,6 +73,10 @@ class App extends Component {
           <EditCV
             workExpArray={this.state.workExpArray}
             educationArray={this.state.educationArray}
+            personalInfo={this.state.personalInfo}
+            modifyPersonalInfo={(field, val) => {
+              this.modifyPersonalInfo(field, val);
+            }}
             addNewEducation={this.addNewEducation}
             addNewWorkExp={this.addNewWorkExp}
             deleteWorkExpEntry={(index) => {
