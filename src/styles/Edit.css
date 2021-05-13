@@ -189,3 +189,28 @@ input {
   border: 3px solid rgb(114, 114, 114);
   background-color: rgb(218, 218, 218);
 }
+
+.success::after {
+  font-size: 1rem;
+  font-family: "Montserrat";
+  margin-left: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 255, 0, 0.13);
+  border-radius: 1rem;
+  content: "Added!";
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 1s ease 0s 1 normal forwards;
+}
+@keyframes disappear {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+    transform: translateX(3rem) scale(1.3);
+  }
+}

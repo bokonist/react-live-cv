@@ -1,7 +1,9 @@
 .preview-container {
   position: sticky;
   top: 12vh;
-  height: 20rem;
+  right: 0;
+  min-height: 30rem;
+  height: auto;
 
   background-color: rgb(209, 209, 209);
   border: 2px dashed black;
