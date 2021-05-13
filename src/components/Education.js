@@ -70,4 +70,5 @@ function Education(props) {
     </div>
   );
 }
-export default Education;
+
+export default React.memo(Education);

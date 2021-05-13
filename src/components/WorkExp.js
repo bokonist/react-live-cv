@@ -70,4 +70,5 @@ function WorkExp(props) {
     </div>
   );
 }
-export default WorkExp;
+
+export default React.memo(WorkExp);

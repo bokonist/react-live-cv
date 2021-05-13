@@ -14,6 +14,11 @@ class App extends Component {
   }
   addNewWorkExp = (event) => {
     event.preventDefault();
+    let target = event.currentTarget;
+    target.classList.add("success");
+    setTimeout(() => {
+      target.classList.remove("success");
+    }, 1000);
     this.setState((prevState) => {
       return {
         workExpArray: [...prevState.workExpArray, {}],
@@ -22,6 +27,11 @@ class App extends Component {
   };
   addNewEducation = (event) => {
     event.preventDefault();
+    let target = event.currentTarget;
+    target.classList.add("success");
+    setTimeout(() => {
+      target.classList.remove("success");
+    }, 1000);
     this.setState((prevState) => {
       return {
         educationArray: [...prevState.educationArray, {}],
@@ -65,7 +75,7 @@ class App extends Component {
     });
   }
   render() {
-    console.log(this.state.personalInfo);
+    console.log(this.state);
     return (
       <div className="App">
         <div className="main-title-container"></div>
@@ -95,6 +105,7 @@ class App extends Component {
           <Preview
             workExpArray={this.state.workExpArray}
             educationArray={this.state.educationArray}
+            personalInfo={this.state.personalInfo}
           />
         </div>
       </div>

@@ -4,4 +4,4 @@ function Preview(props) {
   return <div className="preview-container"></div>;
 }
 
-export default Preview;
+export default React.memo(Preview);

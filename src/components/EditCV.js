@@ -57,8 +57,11 @@ function EditCV(props) {
       ></textarea>
       <div className="section-heading">
         <p className="section-heading-title">Work Experience</p>
-        <div className="button-container">
-          <button onClick={props.addNewWorkExp.bind(this)}>{"+ new"}</button>
+        <div
+          className="button-container"
+          onClick={props.addNewWorkExp.bind(this)}
+        >
+          <button>{"+ new"}</button>
         </div>
       </div>
       <div id="work-exp-list">
@@ -80,8 +83,11 @@ function EditCV(props) {
       </div>
       <div className="section-heading">
         <p className="section-heading-title">Education</p>
-        <div className="button-container">
-          <button onClick={props.addNewEducation.bind(this)}>{"+ new"}</button>
+        <div
+          className="button-container"
+          onClick={props.addNewEducation.bind(this)}
+        >
+          <button>{"+ new"}</button>
         </div>
       </div>
       <div id="education-list">
@@ -104,4 +110,5 @@ function EditCV(props) {
     </div>
   );
 }
-export default EditCV;
+
+export default React.memo(EditCV);
