@@ -3,15 +3,33 @@ import WorkExp from "./WorkExp";
 import Education from "./Education";
 import "../styles/Edit.css";
 function EditCV(props) {
-  let { firstName, lastName, jobTitle, phone, statement } = props.personalInfo;
+  let { firstName, lastName, jobTitle, phone, statement, email, company } =
+    props.personalInfo;
   return (
     <div className="edit-cv-container">
       <div className="section-heading">
         <h1 className="section-heading-title"> Personal Information</h1>
-        <label htmlFor="upload-photo"> Upload Photo</label>
-        <input id="upload-photo" type="file" name="Photo" />
-      </div>
 
+        <label htmlFor="upload-photo"> Upload Photo</label>
+        <input
+          id="upload-photo"
+          type="file"
+          name="Photo"
+          onInput={(event) => {
+            event.preventDefault();
+            props.uploadImage(event.target);
+          }}
+        />
+      </div>
+      <button
+        id="load-sample-button"
+        onClick={(event) => {
+          event.preventDefault();
+          props.loadSample();
+        }}
+      >
+        Load Sample
+      </button>
       <input
         type="text"
         placeholder="First Name"
@@ -37,6 +55,14 @@ function EditCV(props) {
         }}
       />
       <input
+        type="text"
+        placeholder="Current Employer"
+        value={company || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("company", event.target.value);
+        }}
+      />
+      <input
         type="tel"
         placeholder="Phone #"
         value={phone || ""}
@@ -44,6 +70,14 @@ function EditCV(props) {
           props.modifyPersonalInfo("phone", event.target.value);
         }}
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        value={email || ""}
+        onChange={(event) => {
+          props.modifyPersonalInfo("email", event.target.value);
+        }}
       />
       <textarea
         rows="5"

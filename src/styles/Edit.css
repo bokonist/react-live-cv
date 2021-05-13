@@ -9,6 +9,19 @@
   display: grid;
   grid-template-rows: auto;
 }
+
+#load-sample-button {
+  background-color: rgb(194, 0, 0);
+  color: white;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  border: 3px solid black;
+  width: 10rem;
+  justify-self: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
 .section-heading {
   display: flex;
   flex-direction: row;
