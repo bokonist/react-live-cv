@@ -1,12 +1,11 @@
 .preview-container {
   position: sticky;
   top: 12vh;
-  right: 0;
   min-height: 30rem;
 
   height: fit-content;
 
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(44, 49, 49);
   border: 2px solid black;
   margin: 1rem;
 }
@@ -221,4 +220,38 @@
 .preview-education-entry-description {
   color: rgb(211, 211, 211);
   font-size: 1.2rem;
+}
+@media only screen and (min-width: 0px) and (max-width: 1900px) {
+  .preview-container {
+    pointer-events: all;
+    position: fixed;
+    top: 12vh;
+    right: 0;
+    width: 20vw;
+    overflow-y: scroll;
+    min-width: 60rem;
+    max-height: 100%;
+
+    background-color: rgb(44, 49, 49);
+    border: 2px solid black;
+    margin: 0rem;
+
+    transition: 500ms;
+    opacity: 0.7;
+    z-index: 2;
+  }
+  .edit-cv-container {
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1700px) {
+  .preview-container {
+    z-index: 1;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 1200px) {
+  .preview-container {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
