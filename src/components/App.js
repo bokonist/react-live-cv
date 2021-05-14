@@ -80,7 +80,7 @@ class App extends Component {
         firstName: "Sinus",
         lastName: "Vorvalds",
         jobTitle: "Full Stack CSS Developer",
-        company: "Oracle",
+        company: "Microsoft",
         phone: "+1 918-234-7520",
         email: "vorvalds@sinux-foundation.org",
         image: "sample",
@@ -93,8 +93,9 @@ class App extends Component {
           company: "Microsoft",
           location: "Los Angeles",
           startDate: "2020-04-01",
-          endDate: "2021-04-01",
-          description: "I had lots of fun at Microsoft",
+
+          description:
+            "Friendship ended with Bezos, Satya is my new best friend now. Equally shiny dome, again, too distracted. Such is life when you got a mug like mine.",
         },
         {
           title: "Junior Frontend Developer",
@@ -102,7 +103,8 @@ class App extends Component {
           location: "Seattle",
           startDate: "2019-04-01",
           endDate: "2020-04-01",
-          description: "I had lots of fun at amazon",
+          description:
+            "I met Bezos in an elevator on my first day at work, I stared right into his shiny dome and was too distracted by my own beautiful reflection to say anything. Rest of my time here has been pretty uneventful. Learned a lot about CSS positioning.",
         },
       ],
       educationArray: [
@@ -151,7 +153,7 @@ class App extends Component {
     console.log(this.state);
     return (
       <div className="App">
-        <div className="main-title-container"></div>
+        <div className="main-title-container">~ Live C.V. ~</div>
 
         <div className="main-body-container">
           <EditCV

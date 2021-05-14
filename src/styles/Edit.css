@@ -80,8 +80,8 @@ input[type="tel"] {
   height: 12rem;
   width: 12rem;
   border-radius: 10rem;
-  background-color: #3c6e71;
-  font-family: Montserrat;
+  background-color: rgb(44, 49, 49);
+  font-family: "Montserrat";
   font-weight: bolder;
 
   color: rgb(216, 216, 216);

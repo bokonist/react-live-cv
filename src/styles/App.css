@@ -19,6 +19,13 @@
   position: fixed;
   background-color: #353535;
   grid-row: 1;
+
+  color: white;
+  font-size: 4rem;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-body-container {
   grid-row: 2;
@@ -28,4 +35,6 @@
   width: auto;
   position: relative;
   margin-top: 10vh;
+}
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
 }
