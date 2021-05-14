@@ -117,7 +117,8 @@ class App extends Component {
           location: "Massachusetts, USA",
           startDate: "2013-04-01",
           endDate: "2017-04-01",
-          description: "I learned a lot at Harvard",
+          description:
+            "I learned a lot at Harvard. Had to clean the dean's pool for 4 summers straight to bump my grades up to C's. Very friendly wife.",
         },
         {
           degree: "High School Diploma",
@@ -125,7 +126,8 @@ class App extends Component {
           location: "Minnesota, USA",
           startDate: "2009-04-01",
           endDate: "2013-04-01",
-          description: "I had fun being in high school",
+          description:
+            "I had fun being in high school, as technology nerds historically always have.",
         },
       ],
     });
