@@ -1,8 +1,17 @@
 import React from "react";
 
 function Education(props) {
-  let { degree, school, location, startDate, endDate, description } =
-    props.data;
+  let {
+    degree,
+    major,
+    minor,
+    gpa,
+    school,
+    location,
+    startDate,
+    endDate,
+    description,
+  } = props.data;
   return (
     <div className="education-container">
       <input
@@ -11,6 +20,30 @@ function Education(props) {
         value={degree || ""}
         onChange={(event) => {
           props.modifyItem("degree", event.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder={"Major [optional]"}
+        value={major || ""}
+        onChange={(event) => {
+          props.modifyItem("major", event.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder={"Minor [optional]"}
+        value={minor || ""}
+        onChange={(event) => {
+          props.modifyItem("minor", event.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder={"GPA [optional]"}
+        value={gpa || ""}
+        onChange={(event) => {
+          props.modifyItem("gpa", event.target.value);
         }}
       />
       <input

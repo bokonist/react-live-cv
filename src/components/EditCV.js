@@ -21,15 +21,27 @@ function EditCV(props) {
           }}
         />
       </div>
-      <button
-        id="load-sample-button"
-        onClick={(event) => {
-          event.preventDefault();
-          props.loadSample();
-        }}
-      >
-        Load Sample
-      </button>
+      <div className="options-container">
+        <button
+          id="load-sample-button"
+          onClick={(event) => {
+            event.preventDefault();
+            props.loadSample();
+          }}
+        >
+          Load Sample
+        </button>
+        <button
+          id="reset-button"
+          onClick={(event) => {
+            event.preventDefault();
+            props.reset();
+          }}
+        >
+          Reset
+        </button>
+      </div>
+
       <input
         type="text"
         placeholder="First Name"
@@ -64,7 +76,7 @@ function EditCV(props) {
       />
       <input
         type="tel"
-        placeholder="Phone #"
+        placeholder="Phone # (optional)"
         value={phone || ""}
         onChange={(event) => {
           props.modifyPersonalInfo("phone", event.target.value);

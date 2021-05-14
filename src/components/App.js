@@ -107,7 +107,10 @@ class App extends Component {
       ],
       educationArray: [
         {
-          degree: "Undergraduate in Computer Science",
+          degree: "Undergraduate",
+          major: "Computer Science",
+          minor: "Sociology",
+          gpa: 3.89,
           school: "Harvard University",
           location: "Massachusetts, USA",
           startDate: "2013-04-01",
@@ -123,6 +126,13 @@ class App extends Component {
           description: "I had fun being in high school",
         },
       ],
+    });
+  }
+  reset() {
+    this.setState({
+      personalInfo: {},
+      workExpArray: [{}],
+      educationArray: [{}],
     });
   }
   uploadImage(inputElement) {
@@ -149,6 +159,7 @@ class App extends Component {
             educationArray={this.state.educationArray}
             personalInfo={this.state.personalInfo}
             loadSample={this.loadSample.bind(this)}
+            reset={this.reset.bind(this)}
             uploadImage={this.uploadImage.bind(this)}
             modifyPersonalInfo={(field, val) => {
               this.modifyPersonalInfo(field, val);

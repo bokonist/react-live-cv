@@ -3,17 +3,17 @@
   top: 12vh;
   right: 0;
   min-height: 30rem;
-  height: auto;
+  height: fit-content;
 
   background-color: rgb(209, 209, 209);
-  border: 2px dashed black;
+  border: 2px solid black;
   margin: 1rem;
 }
 
 .preview-header {
   height: 10rem;
   width: 100%;
-  background-color: #28494b;
+  background-color: rgb(37, 36, 24);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +54,7 @@
   color: rgb(194, 126, 0);
 }
 .preview-info {
-  background-color: rgb(39, 54, 54);
+  background-color: rgb(44, 49, 49);
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
@@ -85,8 +85,139 @@
   margin: 0rem 1rem;
   padding: 0rem 2rem;
 }
-
+.preview-section-title {
+  background-color: rgb(37, 36, 24);
+  height: 5rem;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0rem 4rem 2rem;
+}
 .preview-work-exp {
   display: grid;
   grid-template-rows: auto;
+  background-color: rgb(54, 53, 39);
+}
+.preview-work-exp-entry {
+  color: white;
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+
+  min-height: 15rem;
+}
+.preview-work-exp-entry-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.preview-work-exp-entry-title {
+  font-size: 2rem;
+}
+.preview-work-exp-entry-company {
+  margin: 0rem 0rem 0rem 1rem;
+  font-size: 1.8rem;
+  color: rgb(214, 0, 0);
+  font-weight: bolder;
+}
+.preview-work-exp-entry-location {
+  margin: 0rem 0rem 0rem 0.5rem;
+  font-size: 1.5rem;
+  color: rgb(211, 211, 211);
+  font-weight: bolder;
+}
+.preview-work-exp-entry-duration {
+  color: rgb(191, 194, 0);
+  font-size: 1rem;
+}
+.preview-work-exp-entry-duration {
+  color: rgb(191, 194, 0);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.preview-work-exp-entry-description {
+  color: rgb(211, 211, 211);
+  font-size: 1.2rem;
+}
+
+.preview-education {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: rgb(44, 49, 49);
+}
+.preview-education-entry {
+  color: white;
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+
+  min-height: 15rem;
+}
+.preview-education-entry-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.preview-education-entry-degree {
+  font-size: 1.5rem;
+}
+.preview-education-entry-school {
+  margin: 0rem 0rem 0rem 1rem;
+  font-size: 1.8rem;
+  color: rgb(214, 0, 0);
+  font-weight: bolder;
+}
+.preview-education-entry-location {
+  margin: 0rem 0rem 0rem 0.5rem;
+  font-size: 1.5rem;
+  color: rgb(211, 211, 211);
+  font-weight: bolder;
+}
+.preview-education-entry-degree-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.preview-education-entry-degree-details .type {
+  color: rgb(255, 174, 0);
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.preview-education-entry-degree-details .subject {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.preview-education-entry-degree-details .gpa {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(0, 180, 0);
+}
+.preview-education-entry-duration {
+  color: rgb(191, 194, 0);
+  font-size: 1rem;
+}
+.preview-education-entry-duration {
+  color: rgb(191, 194, 0);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.preview-education-entry-description {
+  color: rgb(211, 211, 211);
+  font-size: 1.2rem;
 }

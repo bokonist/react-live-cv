@@ -1,5 +1,5 @@
 .edit-cv-container {
-  background-color: #eeeeee;
+  background-color: #c4c4c4;
   padding-left: 1rem;
   padding-top: 2rem;
   padding: 2rem 1rem 2rem 1rem;
@@ -9,8 +9,35 @@
   display: grid;
   grid-template-rows: auto;
 }
-
+.options-container {
+  display: flex;
+  justify-content: center;
+}
+.options-container button {
+  margin-right: 2rem;
+}
+.options-container button:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  background-color: #f1f1f1;
+}
 #load-sample-button {
+  background-color: rgb(191, 194, 0);
+  color: white;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  border: 3px solid black;
+  width: 10rem;
+  justify-self: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+#reset-button {
   background-color: rgb(194, 0, 0);
   color: white;
   font-family: "Montserrat";
