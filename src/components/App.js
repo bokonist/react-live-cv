@@ -21,7 +21,7 @@ class App extends Component {
     }, 1000);
     this.setState((prevState) => {
       return {
-        workExpArray: [...prevState.workExpArray, {}],
+        workExpArray: [{}, ...prevState.workExpArray],
       };
     });
   };
@@ -34,7 +34,7 @@ class App extends Component {
     }, 1000);
     this.setState((prevState) => {
       return {
-        educationArray: [...prevState.educationArray, {}],
+        educationArray: [{}, ...prevState.educationArray],
       };
     });
   };
