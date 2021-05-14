@@ -66,7 +66,7 @@ input[type="tel"] {
   padding: 1rem 0rem 1rem 0.5rem;
 }
 .section-heading input[type="file"] {
-  opacity: 0%;
+  opacity: 0;
   height: 1px;
   width: 1px;
 }
@@ -138,11 +138,11 @@ input {
 }
 @keyframes appear {
   from {
-    opacity: 0%;
+    opacity: 0;
     transform: scale(1.05);
   }
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 .work-exp-container * {
@@ -246,11 +246,11 @@ input {
 }
 @keyframes disappear {
   from {
-    opacity: 100%;
+    opacity: 1;
   }
 
   to {
-    opacity: 0%;
+    opacity: 0;
     transform: translateX(3rem) scale(1.3);
   }
 }
