@@ -99,7 +99,7 @@
 .preview-work-exp {
   display: grid;
   grid-template-rows: auto;
-  background-color: rgb(54, 53, 39);
+  background-color: rgb(44, 49, 49);
 }
 .preview-work-exp-entry {
   color: white;
