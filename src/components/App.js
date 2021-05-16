@@ -152,7 +152,6 @@ class App extends Component {
     };
   }
   render() {
-    console.log(this.state);
     return (
       <div className="App">
         <div className="main-title-container">~ Live C.V. ~</div>

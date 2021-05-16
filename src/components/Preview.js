@@ -6,7 +6,6 @@ import placeholder from "../assets/placeholder.png";
 
 function Preview(props) {
   let { workExpArray, educationArray, personalInfo } = props;
-  console.log(personalInfo);
   return (
     <div className="preview-container">
       <div className="preview-header">
