@@ -22,9 +22,9 @@ function Preview(props) {
       <div className="preview-body">
         <div className="preview-info">
           <div className="preview-info-statement">
-            <quote>
+            <p>
               {personalInfo.statement ? `" ${personalInfo.statement} "` : ""}
-            </quote>
+            </p>
           </div>
           <div className="preview-info-photo-container">
             <img
@@ -68,9 +68,9 @@ function Preview(props) {
                     ? "to present"
                     : ""}
                 </p>
-                <quote className="preview-work-exp-entry-description">
+                <p className="preview-work-exp-entry-description">
                   {workexpEntry.description}
-                </quote>
+                </p>
               </div>
             );
           })}
@@ -122,9 +122,9 @@ function Preview(props) {
                     ? "to present"
                     : ""}
                 </p>
-                <quote className="preview-education-entry-description">
+                <p className="preview-education-entry-description">
                   {educationEntry.description}
-                </quote>
+                </p>
               </div>
             );
           })}
