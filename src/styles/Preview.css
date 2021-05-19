@@ -82,9 +82,11 @@
   color: white;
   line-height: 1.5rem;
   font-size: 1.1rem;
+  font-family: "Montserrat";
   margin: 0rem 1rem;
   padding: 0rem 2rem;
 }
+
 .preview-section-title {
   background-color: rgb(37, 36, 24);
   height: 5rem;
